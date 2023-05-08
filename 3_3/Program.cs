@@ -1,18 +1,22 @@
-﻿internal class Program
+﻿using System.Xml.Linq;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
-        string MyName = "Jane";
-        byte MyAge = 27;
-        bool HaveIApet = true;
-        double MyShoeSize = 37.5;
 
-        Console.WriteLine("My name is " + MyName);
-        Console.WriteLine("MyAge " + MyAge);
-        Console.WriteLine("Do I have a pet? " + HaveIApet);
-        Console.WriteLine("My shoe size is " + MyShoeSize);
+        Console.Write("Enter your name: ");
+        string name = Console.ReadLine();
 
-        Console.WriteLine(" /t Привет,\n мир!");
+        Console.Write("Enter your age: ");
+        byte age = (byte)int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Your name is {0} and age is {1} ", name, age);
+
+        Console.Write("Enter your birthday: ");
+        string birth = Console.ReadLine();
+
+        Console.Write("Your birthday is: {0}", birth);
 
         Console.ReadKey();
     }
